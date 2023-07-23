@@ -1,0 +1,11 @@
+.section{
+    margin: auto;
+    margin-top: 30px;
+background-color: #BDBDBD ;
+width: 1200px;
+min-height: 200px;
+padding: 50px;
+border-top-left-radius: 20px ;
+border-top-right-radius: 20px ;
+
+}

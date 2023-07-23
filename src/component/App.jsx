@@ -1,8 +1,9 @@
 import  './App.css'
 import { Top } from './TopBar'
+import {Section} from './Section'
 function App(){
 
-return <div className='appContainer' > <Top/> </div>
+return <div className='appContainer' > <Top/> <Section/> </div>
 
 }
 
