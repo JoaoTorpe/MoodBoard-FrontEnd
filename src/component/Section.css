@@ -1,4 +1,6 @@
 .section{
+    display: flex;
+    gap: 2rem;
     margin: auto;
     margin-top: 30px;
 background-color: #BDBDBD ;
