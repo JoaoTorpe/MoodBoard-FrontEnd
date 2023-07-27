@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./create-mood.css"
 
 
-function Input(props){
+ export function Input(props){
 
 return <div>  
      <input  placeholder={props.holder}  value={props.value} onChange={ event => props.updateValue(event.target.value)}/>
@@ -21,19 +21,12 @@ export function pop(){
 
 }
 
-function unPop(){
-
-    document.querySelector('.modal-overlay').classList.remove('pop')
-
-}
 
 
 
 export function MoodForm(){
     const [urlImg,setUrl] = useState("")
     const [Desc,setDesc] = useState("")
-
-    const [state,SetState] = useState(false)
     
 
     function submited(){
