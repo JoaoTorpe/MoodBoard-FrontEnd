@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./create-mood.css"
-
+import { postdata } from "../../DataAccess/UseBoadsData";
 
  export function Input(props){
 
@@ -22,6 +22,15 @@ export function pop(){
 }
 
 
+export function createMoodObject(urlData,descData){
+    const moodData={
+        description: descData,
+        imgUrl: urlData,
+    };
+    
+    return moodData
+
+}
 
 
 export function MoodForm(){
@@ -29,7 +38,7 @@ export function MoodForm(){
     const [Desc,setDesc] = useState("")
     
 
-    function submited(){
+    function submited(urlData,descData){
 
     
         const input = document.querySelectorAll('.modal-overlay .modal-body input')
@@ -39,11 +48,15 @@ export function MoodForm(){
     
         }
         else{
-    
+
+              
+              postdata(createMoodObject(urlData,descData));
             unPop()
+            window.location.reload()
         }
     }
 
+   
     function unPop(){
 
         document.querySelector('.modal-overlay').classList.remove('pop')
@@ -59,7 +72,7 @@ export function MoodForm(){
            <Input holder="Descrição" value= {Desc} updateValue={setDesc} />
         </form>
        
-        <button onClick={submited} value="submit" className="btn-secondary">  
+        <button onClick={()=>submited(urlImg,Desc)}  className="btn-secondary">  
         Postar
         </button>
         <button className="exit" onClick={unPop} >X</button>
