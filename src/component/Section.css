@@ -1,14 +1,23 @@
 .section{
     display: flex;
+    justify-content: center;
     gap: 2rem;
     margin: auto;
     margin-top: 30px;
     flex-wrap: wrap;
 background-color: #BDBDBD ;
 width: 1200px;
-min-height: 200px;
+height:auto;
 padding: 50px;
 border-top-left-radius: 20px ;
 border-top-right-radius: 20px ;
+
+}
+
+.innerSection{
+    width: 1050px;
+display: flex;
+gap: 2.5rem;
+flex-wrap: wrap;
 
 }

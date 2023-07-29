@@ -24,14 +24,14 @@ export function Section(){
   
 
     return (<div className='section'> 
-   
+    <div className='innerSection' >
     {boardsData.map((board)=>(
 
         <Board url={board.imgUrl} desc={board.description} />
 
     ))}
     
-    
+    </div>
      </div>
     );
 }
