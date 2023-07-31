@@ -26,8 +26,19 @@ export async function getdata() {
       return [];
     }
   }
+
+  //Enviar o link do board que vai ser deletado
+
   
-   
+   export async function deleteBoard(moodData) {
+    try {
+      const response = await axios.post(API_URl+ '/boards/delete',moodData);
+      return response.data;
+    } catch (error) {
+      console.error('Erro na requisição:', error.message);
+      return [];
+    }
+  }
 
    
 
