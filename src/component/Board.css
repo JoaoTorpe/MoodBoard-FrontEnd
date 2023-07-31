@@ -3,12 +3,13 @@ height: 180px;
 width: 320px ;
 display: flex;
 flex-direction: column;
+box-shadow: -6px 22px 72px 11px rgba(0,0,0,0.52)
 }
 
 .imgSize{
 height: 100%;
 width: 100%;
-border-bottom: solid gray;
+border-bottom: solid #d9d9d9;
 
 }
 
